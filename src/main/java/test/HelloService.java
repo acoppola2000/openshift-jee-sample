@@ -14,7 +14,7 @@ import javax.ws.rs.Produces;
  */
 
 @Path("/")
-public class HelloWorld {
+public class HelloService {
 
 
     @GET
