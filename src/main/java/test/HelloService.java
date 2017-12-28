@@ -20,14 +20,14 @@ public class HelloService {
     @Path("/json")
     @Produces({ "application/json" })
     public String getHelloWorldJSON() {
-        return "{\"result\":\"" + "Hello World" + "\"}";
+        return "{\"result\":\"" + "Hello World " + "\"}";
     }
 
     @GET
     @Path("/xml")
     @Produces({ "application/xml" })
     public String getHelloWorldXML() {
-        return "<xml><result>" + "Hello World" + "</result></xml>";
+        return "<xml><result>" + "Hello World " + System.getenv("POSTGRESQL_DATABASE") + "</result></xml>";
     }
 
 }
