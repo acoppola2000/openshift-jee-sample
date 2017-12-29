@@ -1,5 +1,8 @@
 package main.java.test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -27,6 +30,7 @@ public class HelloService {
     @Path("/xml")
     @Produces({ "application/xml" })
     public String getHelloWorldXML() {
+    	System.out.println("richiesta rest application/xml alle " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
         return "<xml><result>" + "Hello World " + System.getenv("POSTGRESQL_DATABASE") + "</result></xml>";
     }
 
