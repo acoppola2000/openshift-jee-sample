@@ -19,7 +19,7 @@ public class DatabaseReader {
 			
 			databaseURL += System.getenv("OPENSHIFT_POSTGRESQL_DB_HOST") +":" + System.getenv("OPENSHIFT_POSTGRESQL_DB_PORT");
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
-			String username = System.getenv("POSTGRESQL_USER");
+			String username = System.getenv("POSTGRESQL_USER_NEW");
 			String password = System.getenv("POSTGRESQL_PASSWORD");
 	    	System.out.println("databaseURL" + databaseURL +";");
 	    	System.out.println("username" + username +";");
