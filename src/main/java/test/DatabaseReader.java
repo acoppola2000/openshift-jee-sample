@@ -8,9 +8,14 @@ import java.sql.Statement;
 public class DatabaseReader {
 	
 	public String getHello() {		
-		try {			
+		try {
+			
 			String databaseURL = "jdbc:postgresql://";
-			databaseURL += "127.0.0.1";
+			//OPENSHIFT_POSTGRESQL_DB_HOST 
+			//OPENSHIFT_POSTGRESQL_DB_PORT 
+			//jdbc:postgresql://host:port/database			
+			
+			databaseURL += System.getenv("OPENSHIFT_POSTGRESQL_DB_HOST") +":" + System.getenv("OPENSHIFT_POSTGRESQL_DB_PORT");
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
 			String username = System.getenv("POSTGRESQL_USER");
 			String password = System.getenv("POSTGRESQL_PASSWORD");
