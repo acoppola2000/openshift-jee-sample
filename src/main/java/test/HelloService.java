@@ -32,7 +32,7 @@ public class HelloService {
     @Produces({ "application/xml" })
     public String getHelloWorldXML() {
     	System.out.println("richiesta rest application/xml alle " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
-        return "<xml><result>" + "Hello World " + System.getenv("POSTGRESQL_DATABASE") + "</result></xml>";
+        return "<xml><result>" + "Hello World " + System.getenv("POSTGRESQL_DATABASE") + "." + System.getenv("OPENSHIFT_POSTGRESQL_DB_HOST") +":" + System.getenv("OPENSHIFT_POSTGRESQL_DB_PORT") + "</result></xml>";
     }
 
 }
