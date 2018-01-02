@@ -10,7 +10,7 @@ public class DatabaseReader {
 	public String getHello() {		
 		try {			
 			String databaseURL = "jdbc:postgresql://";
-			databaseURL += System.getenv("127.0.0.1:");
+			databaseURL += "127.0.0.1";
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
 			String username = System.getenv("POSTGRESQL_USER");
 			String password = System.getenv("POSTGRESQL_PASSWORD");
