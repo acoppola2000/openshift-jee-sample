@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DatabaseReader {
 	
@@ -17,8 +19,12 @@ public class DatabaseReader {
 			
 			databaseURL += System.getenv("OPENSHIFT_POSTGRESQL_DB_HOST") +":" + System.getenv("OPENSHIFT_POSTGRESQL_DB_PORT");
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
-			String username = System.getenv("POSTGRESQL_USER");
+			String username = System.getenv("POSTGRESQL_USER_NEW");
 			String password = System.getenv("POSTGRESQL_PASSWORD");
+	    	System.out.println("databaseURL" + databaseURL +";");
+	    	System.out.println("username" + username +";");
+	    	System.out.println("password" + password +";");
+			
 			Connection connection = DriverManager.getConnection(databaseURL, username,password);
 			if (connection != null) {
 				String SQL = "select * from films limit 1";
