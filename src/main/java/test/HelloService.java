@@ -23,7 +23,8 @@ public class HelloService {
     @Path("/json")
     @Produces({ "application/json" })
     public String getHelloWorldJSON() {
-        return "{\"result\":\"" + "Hello World " + "\"}";
+    	String nomeFile = new DatabaseReader().getHello();
+        return "{\"result\":\"" + "Hello World " + nomeFile + "\"}";
     }
 
     @GET
