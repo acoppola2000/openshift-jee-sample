@@ -15,7 +15,6 @@ public class DatabaseReader {
 			//OPENSHIFT_POSTGRESQL_DB_PORT 
 			//jdbc:postgresql://host:port/database			
 			
-			
 			databaseURL += System.getenv("OPENSHIFT_POSTGRESQL_DB_HOST") +":" + System.getenv("OPENSHIFT_POSTGRESQL_DB_PORT");
 			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
 			String username = System.getenv("POSTGRESQL_USER");
@@ -35,6 +34,7 @@ public class DatabaseReader {
 				return nomeFilm;
 			}	
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "Database connection problem!";
 		}
 		return "fail";
