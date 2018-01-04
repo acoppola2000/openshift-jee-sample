@@ -1,4 +1,4 @@
-package main.java.test;
+package prova;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+
+import prova.DatabaseReader;
 
 /**
  * A simple REST service which is able to say hello to someone using HelloService Please take a look at the web.xml where JAX-RS

@@ -23,12 +23,6 @@
         </dependency>
         
 		<dependency>
-		  <groupId>org.mybatis</groupId>
-		  <artifactId>mybatis</artifactId>
-		  <version>3.4.5</version>
-		</dependency>       
-		
-		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.4-1200-jdbc41</version>
@@ -48,7 +42,7 @@
           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.6</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <outputDirectory>target</outputDirectory>
